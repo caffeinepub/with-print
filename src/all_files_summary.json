@@ -1,0 +1,18 @@
+{
+  "backend/main.mo": "Motoko backend actor that stores payment confirmations (name, email, phone, UTR, screenshot) in a Map, with functions to submit and retrieve confirmations by UTR.",
+  "feature_evidence.json": "Feature evidence report documenting implemented features including home page with branding/pricing/delivery info, payment page with QR code/UPI details, and payment confirmation form with screenshot upload.",
+  "frontend-file-summaries.txt": "JSON-formatted summaries of frontend files describing styling, routing, home page, payment page, confirmation form, and React Query hooks.",
+  "frontend/index.css": "Tailwind base styles defining CSS custom properties for light and dark themes using OKLCH color space with neutral grayscale palette.",
+  "frontend/index.html": "HTML entry point with title 'WITH PRINT' and root div for React mounting.",
+  "frontend/src/App.tsx": "Main React app component configuring TanStack Router with two routes: home page (/) and payment page (/payment).",
+  "frontend/src/components/PaymentConfirmationForm.tsx": "Form component for submitting payment confirmations with name, email, phone, UTR, and screenshot upload; shows upload progress and success message before redirecting home.",
+  "frontend/src/hooks/useActor.ts": "React Query hook that creates and manages the backend actor instance based on Internet Identity authentication state, invalidating dependent queries on identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "React context provider and hook for Internet Identity authentication, managing login/logout state and identity persistence with AuthClient.",
+  "frontend/src/hooks/useQueries.ts": "React Query mutation hook (useSubmitPayment) for calling the backend's submitPayment function with payment confirmation data.",
+  "frontend/src/index.css": "Tailwind base styles with warm orange/amber OKLCH color palette for light and dark modes, designed for a printing service aesthetic.",
+  "frontend/src/main.tsx": "React application entry point wrapping App with QueryClientProvider and InternetIdentityProvider for state management and authentication.",
+  "frontend/src/pages/HomePage.tsx": "Home page component displaying WITH PRINT branding, hero section, pricing cards for B&W (₹1/page) and color (₹10/page) printing, features section with icons for delivery/contact/quality, and a call-to-action button navigating to the payment page.",
+  "frontend/src/pages/PaymentPage.tsx": "Payment page component showing PhonePe QR code, UPI details (9392673014@axl, Kairamkonda Upendra Devi), step-by-step payment instructions, and integrates PaymentConfirmationForm component for users to submit payment proof.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration with custom theme extensions including OKLCH color system, Inter/Poppins fonts, custom shadows (warm), container queries, typography plugin, and animation utilities for accordions.",
+  "project_state.json": "Project metadata defining WITH PRINT as a 2-page printing service website with architectural notes on payment workflow, existing features list covering home page, payment page, and form submission functionality, and image requirements for PhonePe QR code."
+}

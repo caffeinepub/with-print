@@ -1,0 +1,152 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "WITH PRINT - a professional 2-page printing service website for college students featuring pricing tables, payment integration via PhonePe/UPI, and order confirmation system",
+  "architectural_notes": [
+    "2-page website structure: Home and Payment pages",
+    "Payment integration: PhonePe QR code with UPI ID 9392673014@axl",
+    "Customer workflow: View pricing → Proceed to Payment → Pay via UPI → Submit confirmation form → Success message",
+    "Form captures: Name, Email, Phone, UTR/Transaction ID, Payment screenshot"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- PhonePe payment QR code for UPI ID 9392673014@axl (phonepe-qr.dim_400x400.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-home-page-displaying-business-name-with-print-prominently-at-the-top",
+      "title": "Create a home page displaying business name 'WITH PRINT' prominently at the top",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-pricing-table-on-home-page-showing-b-w-printing-at-1-per-page-and-color-printing-at-10-per-page",
+      "title": "Display pricing table on home page showing B&W printing at ₹1 per page and color printing at ₹10 per page",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-delivery-information-section-to-home-page-stating-delivery-timeline",
+      "title": "Add delivery information section to home page stating delivery timeline",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-contact-phone-number-with-call-timing-information-on-home-page",
+      "title": "Display contact phone number with call timing information on home page",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-proceed-to-payment-button-on-home-page-that-navigates-to-payment-page",
+      "title": "Add 'Proceed to Payment' button on home page that navigates to payment page",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-payment-page-displaying-phonepe-qr-code-image-for-scanning",
+      "title": "Create payment page displaying PhonePe QR code image for scanning",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-upi-id-9392673014-axl-and-name-kairamkonda-upendra-devi-on-payment-page",
+      "title": "Display UPI ID '9392673014@axl' and name 'Kairamkonda Upendra Devi' on payment page",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-step-by-step-payment-instructions-on-payment-page-1-open-phonepe-google-pay-paytm-2-scan-qr-code-3-enter-amount-4-complete-payment-5-take-screenshot-6-fill-form",
+      "title": "Add step-by-step payment instructions on payment page: (1) Open PhonePe/Google Pay/Paytm, (2) Scan QR code, (3) Enter amount, (4) Complete payment, (5) Take screenshot, (6) Fill form",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-payment-confirmation-form-with-fields-name-text-input-email-email-input-phone-number-tel-input-utr-transaction-id-text-input-payment-screenshot-file-upload",
+      "title": "Create payment confirmation form with fields: Name (text input), Email (email input), Phone Number (tel input), UTR/Transaction ID (text input), Payment Screenshot (file upload)",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-blue-colored-submit-button-to-payment-confirmation-form",
+      "title": "Add blue-colored Submit button to payment confirmation form",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-success-message-after-form-submission-payment-received-successfully-we-will-verify-and-start-printing-you-will-get-delivery-tomorrow-morning",
+      "title": "Display success message after form submission: '✅ Payment received successfully. We will verify and start printing. You will get delivery tomorrow morning.'",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-routing-for-2-page-structure-home-page-and-payment-page-payment",
+      "title": "Implement routing for 2-page structure: home page (/) and payment page (/payment)",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-clean-professional-design-theme-with-a-modern-trustworthy-aesthetic-suitable-for-a-college-printing-service-use-warm-approachable-colors-avoid-blue-purple-unless-in-small-accents-ensure-consistent-typography-adequate-spacing-and-clear-visual-hierarchy-across-both-pages",
+      "title": "Apply a clean, professional design theme with a modern, trustworthy aesthetic suitable for a college printing service. Use warm, approachable colors (avoid blue & purple unless in small accents). Ensure consistent typography, adequate spacing, and clear visual hierarchy across both pages.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Home page with pricing tables (B&W and color printing), delivery info, contact details with call timings, and 'Proceed to Payment' button",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Payment page with PhonePe QR code, UPI ID (9392673014@axl), step-by-step payment instructions, and confirmation form (Name, Email, Phone, UTR, Screenshot upload)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Success message after form submission confirming order will be delivered tomorrow morning",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Store payment confirmation data (name, email, phone, UTR, screenshot reference) in backend when form is submitted",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "WITH PRINT",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

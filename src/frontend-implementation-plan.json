@@ -1,0 +1,223 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "WITH PRINT - College Printing Service Website with PhonePe Payment",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Display 'WITH PRINT' business name prominently on home page",
+      "acceptanceCriteria": [
+        "Business name 'WITH PRINT' is displayed prominently on the home page"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "create",
+          "description": "Create home page component displaying 'WITH PRINT' as the main heading at the top of the page"
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Show pricing table with B&W printing at ₹1 and color printing at ₹10 per page",
+      "acceptanceCriteria": [
+        "Pricing table shows B&W printing at ₹1 per page",
+        "Pricing table shows color printing at ₹10 per page",
+        "Pricing information is clearly visible and formatted"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Add pricing table component displaying B&W printing at ₹1 per page and color printing at ₹10 per page with clear formatting"
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Display delivery timeline information on home page",
+      "acceptanceCriteria": [
+        "Delivery information is displayed on home page",
+        "Delivery timeline is clearly communicated"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Add delivery information section stating delivery timeline (next morning delivery)"
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Show contact phone number with call timing information",
+      "acceptanceCriteria": [
+        "Phone number is displayed on home page",
+        "Call timings are shown alongside phone number"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Add contact section displaying phone number with call timing information"
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Add 'Proceed to Payment' button that navigates to payment page",
+      "acceptanceCriteria": [
+        "Button labeled 'Proceed to Payment' is visible on home page",
+        "Clicking button navigates user to payment page"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Add 'Proceed to Payment' button that uses React Router navigation to redirect to /payment route"
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Display PhonePe QR code image on payment page for scanning",
+      "acceptanceCriteria": [
+        "Payment page displays QR code image prominently",
+        "QR code is scannable by payment apps"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/PaymentPage.tsx",
+          "operation": "create",
+          "description": "Create payment page component displaying the generated PhonePe QR code from frontend/public/assets/generated/phonepe-qr.dim_400x400.png as a prominent, scannable image"
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Show UPI ID and payment recipient name on payment page",
+      "acceptanceCriteria": [
+        "UPI ID '9392673014@axl' is displayed clearly",
+        "Name 'Kairamkonda Upendra Devi' is shown on payment page"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/PaymentPage.tsx",
+          "operation": "modify",
+          "description": "Add UPI ID '9392673014@axl' and recipient name 'Kairamkonda Upendra Devi' display below the QR code"
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Display 6-step payment instructions on payment page",
+      "acceptanceCriteria": [
+        "All 6 payment steps are displayed in order",
+        "Instructions are clear and easy to follow"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/PaymentPage.tsx",
+          "operation": "modify",
+          "description": "Add ordered list showing the 6 payment steps: (1) Open PhonePe/Google Pay/Paytm, (2) Scan QR code, (3) Enter amount, (4) Complete payment, (5) Take screenshot, (6) Fill form"
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Create payment confirmation form with name, email, phone, UTR, and screenshot upload fields",
+      "acceptanceCriteria": [
+        "Form contains Name field (text input)",
+        "Form contains Email field (email input)",
+        "Form contains Phone Number field (tel input)",
+        "Form contains UTR/Transaction ID field (text input)",
+        "Form contains Payment Screenshot upload field (file input)",
+        "All fields are properly labeled"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/PaymentConfirmationForm.tsx",
+          "operation": "create",
+          "description": "Create payment confirmation form component with fields for Name (text), Email (email), Phone Number (tel), UTR/Transaction ID (text), and Payment Screenshot (file upload). Use the blob-storage component to handle screenshot upload via ExternalBlob.fromBytes() for the file input. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/pages/PaymentPage.tsx",
+          "operation": "modify",
+          "description": "Import and render PaymentConfirmationForm component below the payment instructions"
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Add blue-colored Submit button to payment form",
+      "acceptanceCriteria": [
+        "Submit button is blue in color",
+        "Button is clearly labeled as 'Submit' or 'Submit Confirmation'"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/PaymentConfirmationForm.tsx",
+          "operation": "modify",
+          "description": "Add blue-colored Submit button labeled 'Submit Confirmation' at the bottom of the form"
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Show success message after form submission confirming payment received and delivery timeline",
+      "acceptanceCriteria": [
+        "Success message appears after form submission",
+        "Message includes checkmark emoji",
+        "Message states 'Payment received successfully'",
+        "Message mentions verification and printing will start",
+        "Message confirms delivery tomorrow morning"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/PaymentConfirmationForm.tsx",
+          "operation": "modify",
+          "description": "Add form submission handler that calls backend.submitPayment() with form data and screenshot ExternalBlob. On success, display message: '✅ Payment received successfully. We will verify and start printing. You will get delivery tomorrow morning.'"
+        }
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "summary": "Implement routing for home page (/) and payment page (/payment)",
+      "acceptanceCriteria": [
+        "Home page accessible at root route",
+        "Payment page accessible at /payment route",
+        "Navigation between pages works correctly"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Configure React Router with routes for home page at / (HomePage component) and payment page at /payment (PaymentPage component)"
+        }
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "summary": "Apply professional, warm, trustworthy design theme suitable for college printing service",
+      "acceptanceCriteria": [
+        "Design feels professional and trustworthy",
+        "Color scheme is warm and approachable",
+        "Typography is consistent across pages",
+        "Layout has clear visual hierarchy",
+        "Design is suitable for college student audience"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Configure global styles with warm, approachable color palette (oranges, yellows, warm browns), professional typography, and consistent spacing. Avoid blue and purple except as small accents."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Customize Tailwind theme with warm color palette, professional fonts, and spacing scale that creates clear visual hierarchy suitable for college students"
+        }
+      ]
+    }
+  ]
+}

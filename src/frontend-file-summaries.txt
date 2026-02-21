@@ -1,0 +1,9 @@
+{
+  "frontend/src/index.css": "Global styles with warm orange/amber OKLCH color palette for light and dark modes, designed for a professional printing service aesthetic.",
+  "frontend/tailwind.config.js": "Tailwind configuration with custom fonts (Inter, Poppins), warm color tokens, and extended utilities including warm shadow effects.",
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup for two routes: home page (/) and payment page (/payment).",
+  "frontend/src/pages/HomePage.tsx": "Home page displaying WITH PRINT branding, pricing tables for B&W (₹1) and color (₹10) printing, delivery info, contact details with call timings, and navigation to payment page.",
+  "frontend/src/pages/PaymentPage.tsx": "Payment page showing PhonePe QR code, UPI ID (9392673014@axl), recipient name, step-by-step payment instructions, and embedded payment confirmation form.",
+  "frontend/src/components/PaymentConfirmationForm.tsx": "Form component handling payment confirmation submission with fields for name, email, phone, UTR, and screenshot upload using ExternalBlob with progress tracking; displays success message after submission.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for backend operations, specifically useSubmitPayment mutation for submitting payment confirmations with form data and screenshot blob."
+}

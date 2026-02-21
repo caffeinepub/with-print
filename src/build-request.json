@@ -1,0 +1,288 @@
+{
+  "kind": "build_request",
+  "title": "Build WITH PRINT printing service website with PhonePe payment",
+  "projectName": "WITH PRINT",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a home page displaying business name 'WITH PRINT' prominently at the top",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Business Name: WITH PRINT"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Business name 'WITH PRINT' is displayed prominently on the home page"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Display pricing table on home page showing B&W printing at ₹1 per page and color printing at ₹10 per page",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Pricing (B&W ₹1, Color ₹10 etc.)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Pricing table shows B&W printing at ₹1 per page",
+        "Pricing table shows color printing at ₹10 per page",
+        "Pricing information is clearly visible and formatted"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add delivery information section to home page stating delivery timeline",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Delivery info"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Delivery information is displayed on home page",
+        "Delivery timeline is clearly communicated"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Display contact phone number with call timing information on home page",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Call number",
+          "contact details with call timings"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Phone number is displayed on home page",
+        "Call timings are shown alongside phone number"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Add 'Proceed to Payment' button on home page that navigates to payment page",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Button: \"Proceed to Payment\""
+        ]
+      },
+      "acceptanceCriteria": [
+        "Button labeled 'Proceed to Payment' is visible on home page",
+        "Clicking button navigates user to payment page"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Create payment page displaying PhonePe QR code image for scanning",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Show your QR code image here",
+          "PhonePe QR code display"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Payment page displays QR code image prominently",
+        "QR code is scannable by payment apps"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Display UPI ID '9392673014@axl' and name 'Kairamkonda Upendra Devi' on payment page",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "UPI ID: 9392673014@axl",
+          "Name: Kairamkonda Upendra Devi"
+        ]
+      },
+      "acceptanceCriteria": [
+        "UPI ID '9392673014@axl' is displayed clearly",
+        "Name 'Kairamkonda Upendra Devi' is shown on payment page"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Add step-by-step payment instructions on payment page: (1) Open PhonePe/Google Pay/Paytm, (2) Scan QR code, (3) Enter amount, (4) Complete payment, (5) Take screenshot, (6) Fill form",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "1. Open PhonePe / Google Pay / Paytm\n2. Scan the QR code\n3. Enter the total amount\n4. Complete payment\n5. Take screenshot\n6. Fill the form below"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All 6 payment steps are displayed in order",
+        "Instructions are clear and easy to follow"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Create payment confirmation form with fields: Name (text input), Email (email input), Phone Number (tel input), UTR/Transaction ID (text input), Payment Screenshot (file upload)",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Your Name",
+          "Your Email",
+          "Phone Number",
+          "UTR / Transaction ID",
+          "Upload Payment Screenshot"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Form contains Name field (text input)",
+        "Form contains Email field (email input)",
+        "Form contains Phone Number field (tel input)",
+        "Form contains UTR/Transaction ID field (text input)",
+        "Form contains Payment Screenshot upload field (file input)",
+        "All fields are properly labeled"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Add blue-colored Submit button to payment confirmation form",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Submit Button (Blue color)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Submit button is blue in color",
+        "Button is clearly labeled as 'Submit' or 'Submit Confirmation'"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Store payment confirmation data (name, email, phone, UTR, screenshot reference) in backend when form is submitted",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Submit Payment Confirmation Form"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend stores customer name",
+        "Backend stores customer email",
+        "Backend stores phone number",
+        "Backend stores UTR/transaction ID",
+        "Backend stores reference to uploaded screenshot",
+        "Data is persisted across canister upgrades"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Display success message after form submission: '✅ Payment received successfully. We will verify and start printing. You will get delivery tomorrow morning.'",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "✅ Payment received successfully\nWe will verify and start printing.\nYou will get delivery tomorrow morning."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Success message appears after form submission",
+        "Message includes checkmark emoji",
+        "Message states 'Payment received successfully'",
+        "Message mentions verification and printing will start",
+        "Message confirms delivery tomorrow morning"
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Implement routing for 2-page structure: home page (/) and payment page (/payment)",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Simple Website Flow (2 Pages Only)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Home page accessible at root route",
+        "Payment page accessible at /payment route",
+        "Navigation between pages works correctly"
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Apply a clean, professional design theme with a modern, trustworthy aesthetic suitable for a college printing service. Use warm, approachable colors (avoid blue & purple unless in small accents). Ensure consistent typography, adequate spacing, and clear visual hierarchy across both pages.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Simple classic 2-page design"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Design feels professional and trustworthy",
+        "Color scheme is warm and approachable",
+        "Typography is consistent across pages",
+        "Layout has clear visual hierarchy",
+        "Design is suitable for college student audience"
+      ]
+    }
+  ],
+  "constraints": [
+    "Must be exactly 2 pages: home page and payment page",
+    "UPI ID must be exactly 9392673014@axl",
+    "Payment recipient name must be Kairamkonda Upendra Devi",
+    "Submit button must be blue colored"
+  ],
+  "nonGoals": [
+    "Payment gateway integration or automated payment verification",
+    "Admin dashboard for managing orders",
+    "User authentication or accounts",
+    "Email notifications",
+    "Real-time payment status updates",
+    "Multiple payment methods beyond UPI"
+  ],
+  "imageRequirements": {
+    "required": [
+      "PhonePe payment QR code for UPI ID 9392673014@axl (phonepe-qr.dim_400x400.png)"
+    ],
+    "edits": []
+  }
+}
